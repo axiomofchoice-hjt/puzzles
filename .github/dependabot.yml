@@ -1,0 +1,30 @@
+version: 2
+
+updates:
+  # npm 依赖（pnpm 使用 npm 生态即可识别 pnpm-lock.yaml）
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: chore
+      prefix-development: chore
+    groups:
+      # 次要/补丁版本合并成一个 PR，减少噪音；大版本各自单独开 PR
+      npm-minor-patch:
+        patterns: ['*']
+        update-types: [minor, patch]
+
+  # GitHub Actions（workflow 里用到的那几个）
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    commit-message:
+      prefix: chore
+    groups:
+      github-actions:
+        patterns: ['*']

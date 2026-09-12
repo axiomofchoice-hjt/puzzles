@@ -17,6 +17,10 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      # 必须显式指定官方 registry：本地/镜像 registry（npmmirror）没有实现 audit 端点
+      # 阈值 high：中危由 Dependabot 提示，高危/严重直接挡 CI
+      # --ignore-registry-errors：registry 故障时不误判为漏洞
+      - run: pnpm audit --registry=https://registry.npmjs.org/ --audit-level=high --ignore-registry-errors
       - run: pnpm typecheck
       - run: pnpm typecheck:e2e
       - run: pnpm lint
