@@ -1,0 +1,20 @@
+.bonus {
+  position: relative;
+  display: inline;
+  text-align: right;
+  line-height: 0;
+  padding: 10px;
+  border-bottom: 2px solid lightgrey;
+  float: right;
+  transition: 0.5s opacity;
+  background-color: #ffffff80;
+  z-index: 100;
+}
+
+.text {
+  padding: 10px;
+  line-height: 20px;
+  font-size: 20px;
+  display: inline;
+  float: right;
+}

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "consolas subset";
+    src: url("./consolas.subset.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "msyh subset";
+    src: url("./msyh.subset.ttc");
+    font-weight: normal;
+    font-style: normal;
+}

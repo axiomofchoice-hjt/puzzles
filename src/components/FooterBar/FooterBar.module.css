@@ -1,0 +1,12 @@
+.footer {
+  position: absolute;
+  bottom: 0.2pt;
+  width: 100%;
+  border-top: 2px solid lightgray;
+}
+
+.task {
+  font-family: consolas subset, consolas;
+  bottom: 2px;
+  position: relative;
+}

@@ -1,0 +1,14 @@
+.button {
+  font-size: 0;
+  pointer-events: auto;
+}
+
+.tipContent {
+  position: absolute;
+  transition: 0.5s opacity ease;
+  background-color: #ffffff80;
+  border-top: 2px solid lightgrey;
+  border-bottom: 2px solid lightgrey;
+  white-space: nowrap;
+  font-family: msyh subset, 微软雅黑;
+}

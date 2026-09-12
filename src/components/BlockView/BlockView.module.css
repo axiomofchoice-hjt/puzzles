@@ -1,0 +1,55 @@
+.outer {
+  position: absolute;
+  z-index: -100;
+  pointer-events: auto;
+}
+
+.inner {
+  position: absolute;
+  overflow: hidden;
+}
+
+.text {
+  position: absolute;
+  text-align: center;
+  font-family:
+    msyh subset,
+    微软雅黑;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.svgOut {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 值切换的淡入/淡出：用 CSS 关键帧（最终态固定，不依赖 JS 逐帧动画） */
+.fadeIn {
+  animation: bv-fade-in 0.3s ease-in both;
+}
+
+.fadeOut {
+  animation: bv-fade-out 0.15s ease-in both;
+}
+
+@keyframes bv-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bv-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
