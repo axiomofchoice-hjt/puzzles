@@ -12,8 +12,8 @@ importers:
         specifier: ^12.0.0
         version: 12.43.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       immer:
-        specifier: ^10.0.0
-        version: 10.0.0
+        specifier: ^11.1.18
+        version: 11.1.18
       js-cookie:
         specifier: ^3.0.5
         version: 3.0.8
@@ -28,7 +28,7 @@ importers:
         version: 19.3.0(react@19.3.0)
       zustand:
         specifier: ^5.0.0
-        version: 5.0.15(@types/react@19.3.0)(immer@10.0.0)(react@19.3.0)
+        version: 5.0.15(@types/react@19.3.0)(immer@11.1.18)(react@19.3.0)
     devDependencies:
       '@eslint/js':
         specifier: ^9.0.0
@@ -830,10 +830,6 @@ packages:
     resolution: {integrity: sha512-WpDfL7NO6j7tH88IDBNVdUJxDh9nmCteAVW9dsep846XdwF4naCBK+/tGLX3KJgcpgMRXCFlTM2hKGoK9FsdrQ==}
     engines: {node: '>=12'}
 
-  ansi-styles@4.0.0:
-    resolution: {integrity: sha512-8zjUtFJ3db/QoPXuuEMloS2AUf79/yeyttJ7Abr3hteopJu9HK8vsgGviGUMq+zyA6cZZO6gAyZoMTF6TgaEjA==}
-    engines: {node: '>=8'}
-
   ansi-styles@4.1.0:
     resolution: {integrity: sha512-Qts4KCLKG+waHc9C4m07weIY8qyeixoS0h6RnbsNVD6Fw+pEZGW3vTyObL3WXpE09Mq4Oi7/lBEyLmOiLtlYWQ==}
     engines: {node: '>=8'}
@@ -1141,8 +1137,8 @@ packages:
     resolution: {integrity: sha512-brTTsvFRt5C1gGHtPst/281UjPD5t9fBqbgoMPlVWy11ZLTPfu7HxK4ZYqO9H7o/yC9rSTCI85EaQ4OoY12qYw==}
     engines: {node: '>= 4'}
 
-  immer@10.0.0:
-    resolution: {integrity: sha512-U5wLsGKDt7+XnufwMYH7+RWcy4JTITNkWsV/H4sNhfIxcXvypDTzn9Cj0Y9Fjj0h1a/Gaba9oZYK0a+kO13uJQ==}
+  immer@11.1.18:
+    resolution: {integrity: sha512-EQyQtLiYW029lyoczMl/Hh4Xu7cDecSc58JRYpHyL4tIAu3eqd1yJzQX04d2BZHDkzFFvm6qJEJWOtfDSWAXbQ==}
 
   import-fresh@3.2.1:
     resolution: {integrity: sha512-6e1q1cnWP2RXD9/keSkxHScg508CdXqXWgWBaETNhyuBFz+kUZlKboh+ISK+bU++DmbHimVBrOz/zzPe0sZ3sQ==}
@@ -2373,10 +2369,6 @@ snapshots:
 
   ansi-regex@6.3.0: {}
 
-  ansi-styles@4.0.0:
-    dependencies:
-      color-convert: 2.0.1
-
   ansi-styles@4.1.0:
     dependencies:
       color-convert: 2.0.1
@@ -2681,7 +2673,7 @@ snapshots:
 
   ignore@7.0.9: {}
 
-  immer@10.0.0: {}
+  immer@11.1.18: {}
 
   import-fresh@3.2.1:
     dependencies:
@@ -3128,7 +3120,7 @@ snapshots:
 
   wrap-ansi@7.0.0:
     dependencies:
-      ansi-styles: 4.0.0
+      ansi-styles: 4.1.0
       string-width: 4.2.0
       strip-ansi: 6.0.1
 
@@ -3144,8 +3136,8 @@ snapshots:
 
   yallist@3.1.1: {}
 
-  zustand@5.0.15(@types/react@19.3.0)(immer@10.0.0)(react@19.3.0):
+  zustand@5.0.15(@types/react@19.3.0)(immer@11.1.18)(react@19.3.0):
     optionalDependencies:
       '@types/react': 19.3.0
-      immer: 10.0.0
+      immer: 11.1.18
       react: 19.3.0
