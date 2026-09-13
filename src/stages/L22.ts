@@ -15,13 +15,15 @@ interface L22State {
 }
 
 const update = (s: L22State, game: GameCtx) => {
+  // 赛道格（x=0..4）永不隐藏。车是后加入的方块，绘制在棋盘格之上且背景不透明，
+  // 本来就完全盖住所在格，所以不需要把格子设成 opacity=0 —— 那样只会把车经过的
+  // 赛道逐格擦掉（BlockView 会把 opacity<=0.01 变成 visibility:hidden）。
   for (const i of range(5)) {
     if (s.pos[i]! < game.m) {
       game.get(game.size + i).pos = new Vec(i, s.pos[i]!)
       game.get(game.size + i).clickable = s.pos[i]! < 5
       game.get(game.size + i).opacity = 1
       game.get(game.size + i).value = strValue(s.locked[i] ? '/' : '')
-      game.get(i, s.pos[i]!).opacity = 0
     } else {
       game.get(game.size + i).opacity = 0
     }
