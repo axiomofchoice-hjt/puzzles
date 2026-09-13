@@ -1,13 +1,12 @@
-import { createContext, useContext, useRef, type ReactNode } from 'react'
+import { createContext, useContext, useState, type ReactNode } from 'react'
 import { useStore } from 'zustand'
 import { createGameStore, type GameStore, type GameStoreApi } from './gameStore'
 
 const GameStoreContext = createContext<GameStoreApi | null>(null)
 
 export function GameStoreProvider({ children }: { children: ReactNode }) {
-  const ref = useRef<GameStoreApi | null>(null)
-  if (!ref.current) ref.current = createGameStore()
-  return <GameStoreContext.Provider value={ref.current}>{children}</GameStoreContext.Provider>
+  const [store] = useState(createGameStore)
+  return <GameStoreContext.Provider value={store}>{children}</GameStoreContext.Provider>
 }
 
 export function useGameStore<T>(selector: (state: GameStore) => T): T {
